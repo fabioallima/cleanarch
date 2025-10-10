@@ -1,0 +1,55 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportGeneralTypeIssues": "warning",
+        "reportOptionalMemberAccess": "warning",
+        "reportOptionalSubscript": "warning",
+        "reportPrivateImportUsage": "warning"
+    },
+    "python.analysis.extraPaths": [
+        ".venv/lib/python*/site-packages"
+    ],
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.stubPath": ".venv/lib/python*/site-packages",
+    "python.analysis.typeshedPaths": [
+        ".venv/lib/python*/site-packages"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": ".venv/bin/pylint",
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintArgs": [
+        "--rcfile=.pylintrc",
+        "--output-format=text"
+    ],
+    "python.linting.ignorePatterns": [],
+    "python.linting.maxNumberOfProblems": 100,
+    "pylint.args": [
+        "--rcfile=.pylintrc"
+    ],
+    "pylint.path": [
+        ".venv/bin/pylint"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": ".venv/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length=100"
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "ruff.enable": true,
+    "ruff.path": [
+        ".venv/bin/ruff"
+    ],
+    "ruff.importStrategy": "fromEnvironment",
+    "ruff.showNotifications": "onError",
+    "ruff.organizeImports": true,
+    "ruff.fixAll": true
+}
