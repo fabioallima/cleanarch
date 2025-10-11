@@ -44,12 +44,11 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
-    "ruff.enable": true,
-    "ruff.path": [
-        ".venv/bin/ruff"
-    ],
-    "ruff.importStrategy": "fromEnvironment",
-    "ruff.showNotifications": "onError",
-    "ruff.organizeImports": true,
-    "ruff.fixAll": true
+    "files.exclude": {
+        "**/*.pyc": {
+            "when": "$(basename).py"
+        },
+        "**/*__pycache__": true,
+        "**/*.pytest_cache": true,
+    }
 }

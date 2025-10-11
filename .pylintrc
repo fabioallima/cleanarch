@@ -4,6 +4,8 @@ disable=
       C0116, # Missing function docstring
       E0015, # Missing class docstring
       C0114, # Missing module docstring
+      C0115, #missing-class-docstring
+      R0903, # Too few public methods
       
       W0703, # Catching too general exception
       C0209, # Using format() with unformatable values
