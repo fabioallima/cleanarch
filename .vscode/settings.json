@@ -9,7 +9,8 @@
         "reportPrivateImportUsage": "warning"
     },
     "python.analysis.extraPaths": [
-        ".venv/lib/python*/site-packages"
+        ".venv/lib/python*/site-packages",
+        "."
     ],
     "python.analysis.autoSearchPaths": true,
     "python.analysis.diagnosticMode": "workspace",
