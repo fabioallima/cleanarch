@@ -1,6 +1,6 @@
 #pylint: disable=broad-exception-raised
 from typing import Dict, List
-from src.domain.use_cases.user_finder import UserFinder as UserFinderInterface
+from src.domain.use_cases.user_finder_interface import UserFinder as UserFinderInterface
 from src.data.interfaces.users_repository import UsersRepositoryInterface
 from src.domain.models.users import Users
 
