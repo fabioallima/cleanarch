@@ -1,6 +1,6 @@
 #pylint: disable=broad-exception-raised
 from typing import Dict
-from src.domain.use_cases.user_register import UserRegister as UserRegisterInterface
+from src.domain.use_cases.user_register_interface import UserRegister as UserRegisterInterface
 from src.data.interfaces.users_repository import UsersRepositoryInterface
 
 class UserRegister(UserRegisterInterface):
