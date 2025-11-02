@@ -1,16 +1,21 @@
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
+
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
 
 class DBConnectionHandler:
 
     def __init__(self) -> None:
         self.__connection_string = "{}://{}:{}@{}:{}/{}".format(
-            'mysql+pymysql',
-            'cleanarch_user',
-            '123456',
-            'localhost',
-            '3307',
-            'clean_database'
+            os.getenv('DB_DRIVER', 'mysql+pymysql'),
+            os.getenv('DB_USER', 'cleanarch_user'),
+            os.getenv('DB_PASSWORD', '123456'),
+            os.getenv('DB_HOST', 'localhost'),
+            os.getenv('DB_PORT', '3307'),
+            os.getenv('DB_NAME', 'clean_database')
         )
         self.__engine = self.__create_database_engine()
         self.session = None
