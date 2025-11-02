@@ -5,7 +5,7 @@ from src.data.interfaces.users_repository import UsersRepositoryInterface
 from src.domain.models.users import Users
 
 # Errors
-from src.errors.types import HttpNotFounfError, HttpBadRequestError
+from src.errors.types import HttpNotFoundError, HttpBadRequestError
 
 class UserFinder(UserFinderInterface):
     def __init__(self, users_repository: UsersRepositoryInterface) -> None:
@@ -27,7 +27,7 @@ class UserFinder(UserFinderInterface):
     def __search_name(self, first_name: str) -> List[Users]:
         users = self.__users_repository.select_user(first_name)
         if not users:
-            raise HttpNotFounfError("Usuario nao encontrado")
+            raise HttpNotFoundError("Usuario nao encontrado")
         return users
 
     @classmethod
