@@ -6,3 +6,5 @@ examples/
 pycache/
 __pycache__/
 *.pyc
+.cursorrules
+cleanarch.code-workspace
